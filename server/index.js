@@ -14,7 +14,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.post('/create-pdf', (req, res) => {
-    pdf.create(pdfTemplate(req.body), {}).toFile('result.pdf', (err) => {
+    pdf.create(pdfTemplate(req.body), {
+        "format":"A4",
+        "orientation":"portrait"
+    }).toFile('result.pdf', (err) => {
         if(err) {
             res.send(Promise.reject());
         }
