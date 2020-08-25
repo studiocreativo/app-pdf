@@ -21,7 +21,7 @@ return `
          padding-left: 1.5px;
       }
       .document{
-         width: 720px;
+         width: 19cm;
          margin-left: auto;
          margin-right: auto;
          border: 2px solid;
